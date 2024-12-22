@@ -1,0 +1,28 @@
+Grailed Uploader Setup Instructions
+
+1. Installation
+   pip install selenium pandas tkinter
+
+2. Required Files
+   - grailed_gui.py
+   - grailed_uploader.py 
+   - config.json
+   - Your files:
+     - listings.xlsx (spreadsheet with item details)
+     - measurements.txt (measurements for each item)
+     - images folder (photos named ItemName_1.jpg)
+
+3. Running
+   - Put all files in one folder
+   - Open terminal/command prompt
+   - Navigate to folder
+   - Run: python grailed_gui.py
+   - Drag files to corresponding zones
+   - Click Start
+
+4. Troubleshooting
+   - Chrome must be installed
+   - Check file permissions
+   - Excel format must match template
+   - Image names must match Excel item names
+   - Python 3.7+ required

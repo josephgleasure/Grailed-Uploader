@@ -1,0 +1,12 @@
+{
+  "grailed_email": "your@email.com",
+  "grailed_password": "password",
+  "excel_path": "listings.xlsx",
+  "image_folder": "images/",
+  "measurements_path": "measurements.txt",
+  "selenium": {
+    "wait_time": 2,
+    "review_pause": true,
+    "retry_attempts": 3
+  }
+}

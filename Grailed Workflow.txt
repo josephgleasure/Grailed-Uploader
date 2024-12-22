@@ -1,0 +1,138 @@
+# Grailed Workflow
+
+## Take Photos
+### 5 Standard Images 
+- front 
+- back
+- caretag
+- collar / waist
+- sleeve / leg hem
+
+## Take Measurements / Name Items 
+### Take all measurements for the type of item 
+
+#### Chest
+- Length
+- Shoulders 
+- Sleeve Length
+- Hem 
+
+#### OR 
+
+#### Waist
+- Inseam
+- Leg Opening
+- Front Rise
+- Thigh
+- Knee
+
+### Assign a name to each item
+#### Use following convention 
+[Brand] [Designer] [Season/Year] [Color] [Material] [Item Type]
+AW or SS if season is known, simply use the year otherwise.
+
+Examples:
+- Comme des Garcons Homme Plus SS13 Black Wool Gabardine Coat
+- Yohji Yamamoto Pour Homme Navy Linen Blazer  
+- Rick Owens DRKSHDW SS17 Grey Cotton Worker Jacket
+- Helmut Lang 1998 Washed Black Denim Jeans
+
+## Edit Images 
+1. Batch import to lightroom 
+2. Apply Auto to every item, tweak from there 
+3. Crop every item to 0.83:1 (Current Grailed image display)
+4. Export everything into 1 folder
+
+## Rename Images 
+1. Select images inside the folder and rename them in bunches using window's utility
+2. Copy names from the measurements doc
+
+## Write Descriptions 
+1. Take Product Names and assign them each row in Excel, add a header for [Full Name]
+2. Insert the front facing image of each image into Excel next to name 
+3. Create the following columns:
+
+[Full Name]
+[Front Image] 
+[Caretag Image]
+[Designer]
+[MainCategory]
+[SubCategory]
+[SubSubCategory]
+[Size]
+[Marked Size]
+[Color]
+[Condition]
+[Condition Rating/10]
+[Damage]
+[Primary Material]
+[Fit]
+[Closure Details]
+[Design Details]
+[Construction Details]
+[Notes/History]
+[Item Category]
+[Season/Year]
+[Country of Origin]
+[Composition Tag]
+[Special Care Instructions]
+[GPT Image Description]
+[Final Description]
+[Tags]
+[Price]
+[Floor Price]
+[Accept Offers]
+[Smart Pricing]
+
+4. Use GPT_Vision to write an [GPT Image Description] using GPT_Vision 
+
+### Use GPT_Vision for tags and care instructions
+Extract the following details from the tag in this image:
+
+Composition: List the materials and percentages (e.g., 100% Cotton, 80% Wool, 20% Nylon). If no composition is listed, return n/a
+Care Instructions: Summarize the care instructions (e.g., Hand wash cold, Do not tumble dry). If no care instructions are visible, return n/a
+
+### Use GPT to write final description using this convention:
+[Full Name]
+
+<History or Interesting Notes>
+[Notes/History] - Insert 2-3 sentences highlighting the item's history, significance, or uniqueness. Focus on why it's important or special. Use storytelling here to make it engaging.
+
+<Product Description>
+[Designer], [Marked Size], [Color], [Condition], [Primary Material], [Fit], [Closure Details], [Design Details], [Construction Details], [Season or Year of Production], [GPT Image Description] - Provide 2-5 factual sentences describing the item. Avoid adjectives unless strictly necessary for clarity. If any variables are missing or empty, please skip them.
+
+<Condition>
+Condition Rating: [Condition Rating/10]  
+[Damage] - Mention any specific flaws in the item as a sentence or two. Be honest and reflective of the item's quality. If there are no flaws, simply state "No visible flaws."
+
+<Item Details>
+Marked Size: [Marked Size] or "Unmarked" if unknown  
+Composition: [Composition Tag] or "Unknown" if the tag is missing or damaged  
+Origin: [Country of Origin], formatted as "Made in X" or "Imported" if unknown  
+Category: [Item Category]  
+Care Instructions: [Special Care Instructions] or skip if none available  
+
+Use correct punctuation and capitalization, reuse the same terms and format to describe details as well. E.g. a 5 pocket construction, zipper closure, cuffed hem, surgeon cuff, 3 button closure. 
+
+### Use GPT to generate tags with the following prompt: 
+
+Create 10 Grailed-appropriate tags for:
+[Designer]: {Designer}
+[Category]: {Category}
+[Style]: {Design Details}
+[Material]: {Primary Material}
+[Era]: {Season/Year}
+
+Format as comma-separated list. Include designer name, style, materials, era/year if vintage, and relevant fashion movements/aesthetics.
+
+# Run Grailed Automation
+
+## File Setup
+- Put Config, GUI, Upload Script & Setup.txt in one folder
+- Put listings.xlsx, measurements.txt & images in another folder
+## Run Program
+- Open terminal in script folder
+- Run: python grailed_gui.py 
+## Upload
+- Drag required files into GUI zones
+- Click Start when all files added
