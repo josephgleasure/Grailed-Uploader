@@ -2,6 +2,8 @@
 
 Automation tool and workflow for uploading listings to Grailed.com. Handles product photos, descriptions, measurements and automated form filling. This tool and workflow speed up tedious aspects of the listing creation process while ensuring greater consistency. Designed for sellers uploading 10-100+ items at a time, it eliminates manual copying and pasting of information. The workflow consolidates information, establishes consistent listing language, and assists with uploads. Simply add product information and photos, then let the tool handle the rest.
 
+Refer to the workflow.txt file for an overview of an entire product upload process from photograph to final upload.
+
 ## Features
 - Drag-and-drop interface
 - Batch photo processing
