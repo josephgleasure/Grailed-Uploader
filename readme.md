@@ -1,6 +1,6 @@
 # Grailed Auto-Uploader
 
-Automation tool for bulk uploading listings to Grailed.com. Handles product photos, descriptions, measurements and automated form filling.
+Automation tool and workflow for uploading listings to Grailed.com. Handles product photos, descriptions, measurements and automated form filling. This tool and workflow speed up tedious aspects of the listing creation process while ensuring greater consistency. Designed for sellers uploading 10-100+ items at a time, it eliminates manual copying and pasting of information. The workflow consolidates information, establishes consistent listing language, and assists with uploads. Simply add product information and photos, then let the tool handle the rest.
 
 ## Features
 - Drag-and-drop interface
@@ -39,6 +39,10 @@ project/
 │   ├── measurements.txt
 │   └── images/
 ```
+
+## Note on File Structure 
+
+This was written based on my workflow, which involves building a product line sheet with everything you want to list online. I usually measure items while shooting them, so I neglected to include the measurements in the listings.xlsx. Future updates might rectify that, but I'm not sure yet.  
 
 ## Setup
 1. Install dependencies
